@@ -23,13 +23,13 @@ public class Laucnher {
 
     public static void main(String[] args) throws InterruptedException {
 
-        /** 2 пункт задания */
+       
         /** Виды коробок с разными предикатами, раскоментировать коробку чтобы протестировать работу */
         //Box box = new SweetsBox(sweet -> sweet instanceof Chocolate && sweet.getWeight() > 5); // только шоколадки весом больше 5
         Box box = new SweetsBox(); // любые сладости
         //Box box = new SweetsBox(sweet -> sweet.getPrice() < 50); // любые сладости дешевле 50 рублей
 
-        /** @see FactorySweets * ----- 1 пункт задания ----- */
+        /** @see FactorySweets */
         //Создание вкусняшек через статические ссылки на методы
         FactorySweets<Sweet> candyFactory = Candy::new;
         box.add(candyFactory.create(15, Sweet.getRandomWeight(), Candy.randomTaste()));
@@ -55,7 +55,6 @@ public class Laucnher {
             box.add(oneDonut.create(80, Sweet.getRandomWeight(), Sweet.randomTaste()));
         }
 
-        /** 4 пункт задания */
         box.getInfoAboutSweets();
         System.out.println("------------------------");
         System.out.println("Общая стоимость коробки " + box.totalCostOfBox());
@@ -63,7 +62,6 @@ public class Laucnher {
         box.howMuchSweetInBox(sweet -> sweet instanceof Candy);//предикат, какие конфеты считаем в коробке
         System.out.println("------------------------");
 
-        /** 3 пункт задания */
         int eur = 77;
         int usd = 68;
         Converter converter;
