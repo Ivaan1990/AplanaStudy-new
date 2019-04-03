@@ -1,8 +1,0 @@
-
-# Курс АФТ
- 
-
-- FirstTask -  первое ДЗ
-- SecondTask -  второе ДЗ
-- Box Collector - сборщик коробки сладостей
-- SeleniumEdu - задания по Selenium
